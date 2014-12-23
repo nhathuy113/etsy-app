@@ -1,0 +1,43 @@
+<div class="container">
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">QA in Odessa</a>
+		</div>
+	<div id="navbar" class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li class="dropdown"><a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">More<span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">QA Manual</a></li>
+					<li><a href="#">QA Automation</a></li>
+					<li class="divider"></li>
+					<li class="dropdown-header">Other</li>
+					<li><a href="#">How to became QA</a></li>
+					<li><a href="#">FAQ</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="nav pull-right">
+			<form class="navbar-form pull-right">
+                <% if user_signed_in? %>
+              		Logged in as <strong> <%= current_user.email %> </strong>
+            		<%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "btn btn-default" %>
+            	<% else %>
+              		<%= link_to "Sign up", new_user_registration_path, :class => "btn btn-default" %>
+              		<%= link_to "Sign in", new_user_session_path, :class => "btn btn-default" %>
+            	<% end %>
+            </form>
+         </ul> 	
+       </div>
+	</div>
+</nav>	 
+</div>
